@@ -7,7 +7,6 @@ let arr=[1,1,2,3,2,5,6];
 
 let map=new Map();
 
-let obj={};
 for(let i=0;i<arr.length;i++){
  if(map.has(arr[i])){
    
