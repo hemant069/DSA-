@@ -21,7 +21,7 @@ function linearSearch(arr, x) {
   return false;
 }
 
-// 2 Optimal Solution
+// 2 Better Solution
 
 let longest = 1;
 
@@ -41,3 +41,29 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 return longest;
+
+// 3 Optimal Solution
+
+let longest = 1;
+
+let count = 0;
+
+let st = new Set();
+
+for (let i = 0; i < arr.length; i++) {
+  st.add(arr[i]);
+}
+
+for (let it of st) {
+  if (!st.has(it - 1)) {
+    count = 1;
+    let x = it;
+    while (st.has(x + 1)) {
+      x = x + 1;
+      count++;
+    }
+    longest = Math.max(longest, count);
+  }
+}
+
+console.log(longest);
