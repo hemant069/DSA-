@@ -23,14 +23,16 @@ function merge(nums,low,mid,high){
 
     while(left<=mid){
         temp.push(nums[left]);
+        left++
     }
 
     while(right<=high){
         temp.push(nums[right]);
+        right++
     }
 
     for(let i=low;i<=high;i++){
-        nums[i]=temp[low-i]
+        nums[i]=temp[i-low]
     }
 
 }
