@@ -1,7 +1,7 @@
 /// Lower Bound
 
 
-
+// Condition arr[mid]>=x
 
 let arr=[3,5,8,15,19];
 

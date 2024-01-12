@@ -5,7 +5,9 @@ let arr=[3,5,8,9,15,19];
 let x=9;
 
 
-// Upper bound
+// Upper bound 
+
+// Condition arr[mid]>x 
 
 let low=0;
 let high=arr.length-1;
