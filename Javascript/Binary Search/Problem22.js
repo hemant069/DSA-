@@ -41,20 +41,6 @@ function isPossiable(arr, dist, k) {
 
 // Optimal solution
 
-let arr = [0, 3, 4, 7, 10, 9];
-
-let k = 4;
-
-arr.sort((a, b) => a - b);
-
-let min = Infinity;
-let max = -Infinity;
-
-for (let i = 0; i < arr.length; i++) {
-  min = Math.min(min, arr[i]);
-  max = Math.max(max, arr[i]);
-}
-
 let low = 1;
 let high = max - min;
 let ans = -1;
