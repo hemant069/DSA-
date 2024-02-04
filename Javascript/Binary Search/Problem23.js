@@ -33,3 +33,36 @@ function isPossiable(arr, pages, m) {
   return student;
   // body...
 }
+
+// Optimal solution
+
+let low = max;
+let high = sum;
+let ans = -1;
+
+while (low <= high) {
+  let mid = Math.floor((low + high) / 2);
+
+  if (isPossiable(arr, mid) == m) {
+    high = mid - 1;
+  } else {
+    low = mid + 1;
+  }
+}
+console.log(low);
+
+function isPossiable(arr, pages) {
+  let student = 1;
+  let pagesStudent = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (pagesStudent + arr[i] <= pages) {
+      pagesStudent += arr[i];
+    } else {
+      student++;
+      pagesStudent = arr[i];
+    }
+  }
+  return student;
+  // body...
+}
