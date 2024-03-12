@@ -1,7 +1,3 @@
-/**
- * @param {string} s
- * @return {number}
- */
 var beautySum = function (str) {
   let sum = 0;
 
